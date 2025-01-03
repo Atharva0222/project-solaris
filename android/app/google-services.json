@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159873471768",
+    "project_id": "project-sola-ris-a2yh07",
+    "storage_bucket": "project-sola-ris-a2yh07.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159873471768:android:f2e0f8c2de42e6baf6ba6d",
+        "android_client_info": {
+          "package_name": "com.mycompany.projectsolaris"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjLWJUdxh9yfAFB7sHiOn4AEUqx5onv9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

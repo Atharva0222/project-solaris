@@ -165,6 +165,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/fAQs',
           builder: (context, params) =>
               params.isEmpty ? const NavBarPage(initialPage: 'FAQs') : const FAQsWidget(),
+        ),
+        FFRoute(
+          name: 'Avatars',
+          path: '/avatars',
+          builder: (context, params) => const AvatarsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

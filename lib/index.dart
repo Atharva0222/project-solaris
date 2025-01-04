@@ -21,3 +21,4 @@ export '/pages/calculated_potential/calculated_potential_widget.dart'
     show CalculatedPotentialWidget;
 export '/pages/edit_profile/edit_profile_widget.dart' show EditProfileWidget;
 export '/pages/f_a_qs/f_a_qs_widget.dart' show FAQsWidget;
+export '/pages/avatars/avatars_widget.dart' show AvatarsWidget;

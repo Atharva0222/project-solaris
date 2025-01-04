@@ -92,13 +92,22 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                               width: 4.0,
                             ),
                           ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(60.0),
-                            child: Image.network(
-                              'https://images.unsplash.com/photo-1523444967761-8f47d458269e?w=500&h=500',
-                              width: 120.0,
-                              height: 120.0,
-                              fit: BoxFit.cover,
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed('Avatars');
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(60.0),
+                              child: Image.network(
+                                FFAppState().selectedAvatar,
+                                width: 120.0,
+                                height: 120.0,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
@@ -342,7 +351,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                           await authManager.signOut();
                           GoRouter.of(context).clearRedirectLocation();
 
-                          context.goNamedAuth('getStarted', context.mounted);
+                          context.goNamedAuth('accountPage', context.mounted);
                         },
                         text: 'Logout',
                         options: FFButtonOptions(

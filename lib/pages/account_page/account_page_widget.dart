@@ -3,7 +3,9 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'account_page_model.dart';
 export 'account_page_model.dart';
@@ -49,7 +51,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: SizedBox(
+        body: Container(
           width: MediaQuery.sizeOf(context).width * 1.0,
           height: MediaQuery.sizeOf(context).height * 1.0,
           child: Stack(
@@ -61,16 +63,16 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                   gradient: LinearGradient(
                     colors: [
                       FlutterFlowTheme.of(context).primary,
-                      const Color(0xFFA1F8D6)
+                      Color(0xFFA1F8D6)
                     ],
-                    stops: const [0.0, 1.0],
-                    begin: const AlignmentDirectional(0.0, -1.0),
-                    end: const AlignmentDirectional(0, 1.0),
+                    stops: [0.0, 1.0],
+                    begin: AlignmentDirectional(0.0, -1.0),
+                    end: AlignmentDirectional(0, 1.0),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 38.0, 24.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 38.0, 24.0, 24.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -108,7 +110,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            '@$currentUserEmail',
+                            '@${currentUserEmail}',
                             style: FlutterFlowTheme.of(context)
                                 .bodyLarge
                                 .override(
@@ -118,7 +120,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(const SizedBox(height: 8.0)),
+                        ].divide(SizedBox(height: 8.0)),
                       ),
                       Material(
                         color: Colors.transparent,
@@ -134,7 +136,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -157,12 +159,12 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFE3F2FD),
+                                        color: Color(0xFFE3F2FD),
                                         borderRadius:
                                             BorderRadius.circular(20.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             8.0, 16.0, 8.0, 16.0),
                                         child: Text(
                                           FFAppState().currentPlan,
@@ -170,7 +172,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: const Color(0xFF1565C0),
+                                                color: Color(0xFF1565C0),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -292,7 +294,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                         ),
                                         Text(
                                           (String var1) {
-                                            return "$var1 Month(s)";
+                                            return var1 + " Month(s)";
                                           }(FFAppState().timePeriod.toString()),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
@@ -306,9 +308,9 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                         ),
                                       ],
                                     ),
-                                  ].divide(const SizedBox(height: 12.0)),
+                                  ].divide(SizedBox(height: 12.0)),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -321,9 +323,9 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 50.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -348,11 +350,11 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 50.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0x00FFFFFF),
+                          color: Color(0x00FFFFFF),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
@@ -367,17 +369,17 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                           borderRadius: BorderRadius.circular(25.0),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 44.0, 24.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 44.0, 24.0, 0.0),
                 child: FlutterFlowIconButton(
                   borderColor: Colors.transparent,
                   borderRadius: 20.0,
                   buttonSize: 40.0,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.arrow_back,
                     color: Colors.white,
                     size: 24.0,

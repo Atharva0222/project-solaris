@@ -2,8 +2,11 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'confirmation_plan_model.dart';
 export 'confirmation_plan_model.dart';
@@ -84,7 +87,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -101,14 +104,14 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+            padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -126,7 +129,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -150,7 +153,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                 Container(
                                   width: 160.0,
                                   height: 40.0,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: Color(0xFF8BFFCE),
                                     boxShadow: [
                                       BoxShadow(
@@ -170,9 +173,9 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                     ),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 5.0, 0.0),
                                       child: Text(
                                         () {
@@ -245,11 +248,11 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE3F2FD),
+                                    color: Color(0xFFE3F2FD),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 16.0, 8.0, 16.0),
                                     child: Text(
                                       () {
@@ -267,7 +270,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: const Color(0xFF1565C0),
+                                            color: Color(0xFF1565C0),
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -292,7 +295,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                 ),
                                 Text(
                                   (String var1) {
-                                    return "$var1 Month(s)";
+                                    return var1 + " Month(s)";
                                   }(FFAppState().timePeriod.toString()),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -303,7 +306,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                 ),
                               ],
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -321,7 +324,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -335,7 +338,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                            SizedBox(
+                            Container(
                               width: 300.0,
                               child: TextFormField(
                                 controller: _model.textController,
@@ -367,7 +370,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -404,7 +407,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                 inputFormatters: [_model.textFieldMask],
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -422,7 +425,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -457,7 +460,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(width: 12.0)),
+                                  ].divide(SizedBox(width: 12.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -477,11 +480,11 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(width: 12.0)),
+                                  ].divide(SizedBox(width: 12.0)),
                                 ),
-                              ].divide(const SizedBox(height: 12.0)),
+                              ].divide(SizedBox(height: 12.0)),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -499,7 +502,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -517,7 +520,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -551,7 +554,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -580,7 +583,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -614,7 +617,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Container(
                                     width:
@@ -660,9 +663,9 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 12.0)),
+                              ].divide(SizedBox(height: 12.0)),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -676,9 +679,9 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 56.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
@@ -690,7 +693,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                       borderRadius: BorderRadius.circular(28.0),
                     ),
                   ),
-                ].divide(const SizedBox(height: 24.0)),
+                ].divide(SizedBox(height: 24.0)),
               ),
             ),
           ),

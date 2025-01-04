@@ -2,10 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profit_calculator_model.dart';
 export 'profit_calculator_model.dart';
 
@@ -68,7 +65,7 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
             },
           ),
           title: Align(
-            alignment: AlignmentDirectional(-1.0, -1.0),
+            alignment: const AlignmentDirectional(-1.0, -1.0),
             child: Text(
               'Profit Calculator',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -79,26 +76,26 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                   ),
             ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(-1.0, -1.0),
+            alignment: const AlignmentDirectional(-1.0, -1.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(12.0, 20.0, 12.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(12.0, 20.0, 12.0, 0.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: 280.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           blurRadius: 6.0,
                           color: Color(0x33000000),
@@ -116,9 +113,9 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, -1.0),
+                          alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 2.0, 0.0, 0.0),
                             child: Text(
                               'Monthly Electricity Bill',
@@ -134,9 +131,9 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 12.0, 0.0),
-                          child: Container(
+                          child: SizedBox(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             child: TextFormField(
                               controller: _model.textController1,
@@ -159,14 +156,14 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                                       letterSpacing: 0.0,
                                     ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
@@ -204,9 +201,9 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, -1.0),
+                          alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 2.0, 0.0, 0.0),
                             child: Text(
                               'Monthly Energy Usage',
@@ -222,9 +219,9 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 12.0, 0.0),
-                          child: Container(
+                          child: SizedBox(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             child: TextFormField(
                               controller: _model.textController2,
@@ -247,14 +244,14 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                                       letterSpacing: 0.0,
                                     ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
@@ -322,9 +319,9 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                           text: 'Get Savings',
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -346,13 +343,13 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                 if (_model.getSavings)
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 26.0, 12.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(12.0, 26.0, 12.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 200.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 6.0,
                             color: Color(0x33000000),
@@ -373,7 +370,7 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                             width: 140.0,
                             height: 160.0,
                             decoration: BoxDecoration(
-                              color: Color(0xFFFCEBEB),
+                              color: const Color(0xFFFCEBEB),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Column(
@@ -381,9 +378,9 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: Text(
                                       'Electricity Bill',
@@ -433,7 +430,7 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                             width: 140.0,
                             height: 160.0,
                             decoration: BoxDecoration(
-                              color: Color(0xFFCCF6E4),
+                              color: const Color(0xFFCCF6E4),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Column(
@@ -441,9 +438,9 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: Text(
                                       'With Solaris',
@@ -495,7 +492,7 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                 if (_model.getSavings)
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                     child: Text(
                       'Your Savings in 5 years',
                       style: FlutterFlowTheme.of(context).displaySmall.override(
@@ -508,7 +505,7 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                 if (_model.getSavings)
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 14.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 14.0, 0.0, 0.0),
                     child: Text(
                       formatNumber(
                         ((int.parse(_model.textController1.text) * 12) -
@@ -530,7 +527,7 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                 if (_model.getSavings)
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(8.0, 20.0, 8.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(8.0, 20.0, 8.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed('SubscriptionPlan');
@@ -539,10 +536,10 @@ class _ProfitCalculatorWidgetState extends State<ProfitCalculatorWidget> {
                       options: FFButtonOptions(
                         width: MediaQuery.sizeOf(context).width * 0.8,
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

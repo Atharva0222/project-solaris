@@ -2,13 +2,8 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'get_started_model.dart';
 export 'get_started_model.dart';
 
@@ -48,8 +43,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: Offset(3.0, 3.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(3.0, 3.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -68,8 +63,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
             curve: Curves.bounceOut,
             delay: 300.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.6, 0.6),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.6, 0.6),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -88,8 +83,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
             curve: Curves.easeInOut,
             delay: 350.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -108,8 +103,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
             curve: Curves.easeInOut,
             delay: 350.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -128,8 +123,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -148,8 +143,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
             curve: Curves.bounceOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.6, 0.6),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.6, 0.6),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -184,13 +179,13 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color(0xFF00F260),
-                      Color(0xFF0575E6),
+                      const Color(0xFF00F260),
+                      const Color(0xFF0575E6),
                       FlutterFlowTheme.of(context).tertiary
                     ],
-                    stops: [0.0, 0.5, 1.0],
-                    begin: AlignmentDirectional(-1.0, -1.0),
-                    end: AlignmentDirectional(1.0, 1.0),
+                    stops: const [0.0, 0.5, 1.0],
+                    begin: const AlignmentDirectional(-1.0, -1.0),
+                    end: const AlignmentDirectional(1.0, 1.0),
                   ),
                 ),
                 child: Container(
@@ -199,12 +194,12 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0x00FFFFFF),
+                        const Color(0x00FFFFFF),
                         FlutterFlowTheme.of(context).secondaryBackground
                       ],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(0.0, -1.0),
-                      end: AlignmentDirectional(0, 1.0),
+                      stops: const [0.0, 1.0],
+                      begin: const AlignmentDirectional(0.0, -1.0),
+                      end: const AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: Column(
@@ -219,7 +214,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                           shape: BoxShape.circle,
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'assets/images/SolaRis_Logo.png',
                             width: 100.0,
@@ -231,7 +226,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                           animationsMap['containerOnPageLoadAnimation2']!),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
                         child: Text(
                           'Welcome To',
                           style: FlutterFlowTheme.of(context)
@@ -246,7 +241,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                         child: Text(
                           'SolaRis',
                           style: FlutterFlowTheme.of(context)
@@ -261,7 +256,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                             animationsMap['textOnPageLoadAnimation2']!),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             44.0, 8.0, 44.0, 0.0),
                         child: Text(
                           'Where Energy\nMeets Efficieny',
@@ -282,16 +277,16 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                   animationsMap['containerOnPageLoadAnimation1']!),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 44.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 44.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Expanded(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 16.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 16.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed('onboarding');
@@ -300,9 +295,9 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                           options: FFButtonOptions(
                             width: 230.0,
                             height: 52.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,

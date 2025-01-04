@@ -2,10 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'calculated_potential_model.dart';
 export 'calculated_potential_model.dart';
 
@@ -55,7 +52,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -73,14 +70,14 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -88,7 +85,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                     child: Material(
                       color: Colors.transparent,
                       elevation: 2.0,
@@ -106,7 +103,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -127,13 +124,13 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: SliderTheme(
-                                            data: SliderThemeData(
+                                            data: const SliderThemeData(
                                               showValueIndicator:
                                                   ShowValueIndicator.always,
                                             ),
-                                            child: Container(
+                                            child: SizedBox(
                                               width: 270.0,
                                               child: Slider(
                                                 activeColor:
@@ -173,7 +170,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                   ),
-                                ].divide(SizedBox(height: 12.0)),
+                                ].divide(const SizedBox(height: 12.0)),
                               ),
                             ),
                           ],
@@ -183,7 +180,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                     child: Material(
                       color: Colors.transparent,
                       elevation: 2.0,
@@ -198,7 +195,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 20.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -215,11 +212,10 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                               ),
                               Text(
                                 (double capacity) {
-                                  return ((capacity * 40000 +
+                                  return "${((capacity * 40000 +
                                                   capacity * 9.25 * 300) /
                                               (capacity * 5 * 0.8 * 365 * 5))
-                                          .toStringAsFixed(2) +
-                                      "Years";
+                                          .toStringAsFixed(2)}Years";
                                 }(_model.sliderValue!),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineLarge
@@ -241,7 +237,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                            ].divide(SizedBox(height: 12.0)),
+                            ].divide(const SizedBox(height: 12.0)),
                           ),
                         ),
                       ),
@@ -249,7 +245,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                     child: Material(
                       color: Colors.transparent,
                       elevation: 2.0,
@@ -277,7 +273,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -313,9 +309,8 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                                           ),
                                           Text(
                                             (double capacity) {
-                                              return "₹" +
-                                                  (capacity * 5 * 0.8 * 365 * 5)
-                                                      .toStringAsFixed(0);
+                                              return "₹${(capacity * 5 * 0.8 * 365 * 5)
+                                                      .toStringAsFixed(0)}";
                                             }(_model.sliderValue!),
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
@@ -345,14 +340,13 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                                           ),
                                           Text(
                                             (double capacity) {
-                                              return "₹" +
-                                                  (capacity *
+                                              return "₹${(capacity *
                                                           5 *
                                                           0.8 *
                                                           365 *
                                                           5 *
                                                           25)
-                                                      .toStringAsFixed(0);
+                                                      .toStringAsFixed(0)}";
                                             }(_model.sliderValue!),
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
@@ -379,7 +373,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                   ),
-                                ].divide(SizedBox(height: 12.0)),
+                                ].divide(const SizedBox(height: 12.0)),
                               ),
                             ),
                           ),
@@ -388,7 +382,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
                     child: Material(
                       color: Colors.transparent,
                       elevation: 2.0,
@@ -416,7 +410,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -444,17 +438,16 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
                                               (double capacity) {
-                                                return (capacity *
+                                                return "${(capacity *
                                                             5 *
                                                             0.8 *
                                                             365 *
                                                             25 /
                                                             1000)
-                                                        .toStringAsFixed(0) +
-                                                    " Tonne CO₂";
+                                                        .toStringAsFixed(0)} Tonne CO₂";
                                               }(_model.sliderValue!),
                                               textAlign: TextAlign.start,
                                               style:
@@ -485,7 +478,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                   ),
-                                ].divide(SizedBox(height: 12.0)),
+                                ].divide(const SizedBox(height: 12.0)),
                               ),
                             ),
                           ),
@@ -495,7 +488,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                     child: Material(
                       color: Colors.transparent,
                       elevation: 2.0,
@@ -510,7 +503,7 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -519,9 +512,9 @@ class _CalculatedPotentialWidgetState extends State<CalculatedPotentialWidget> {
                             text: 'Buy Plans',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)

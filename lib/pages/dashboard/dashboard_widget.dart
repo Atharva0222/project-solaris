@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'dashboard_model.dart';
@@ -50,14 +47,14 @@ class _DashboardWidgetState extends State<DashboardWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(24.0, 36.0, 24.0, 24.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(24.0, 36.0, 24.0, 24.0),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -70,7 +67,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                 ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             210.0, 0.0, 0.0, 0.0),
                         child: Container(
                           decoration: BoxDecoration(
@@ -108,7 +105,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 20.0, 20.0, 20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -122,7 +119,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'You\'re On${FFAppState().currentPlan}Plan',
+                                    'You\'re On ${FFAppState().currentPlan} Plan',
                                     style: FlutterFlowTheme.of(context)
                                         .headlineSmall
                                         .override(
@@ -175,7 +172,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(height: 16.0)),
+                        ].divide(const SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
@@ -193,7 +190,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 20.0, 20.0, 20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -232,7 +229,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                 value: _model.switchValue!,
                                 onChanged: (newValue) async {
                                   safeSetState(
-                                      () => _model.switchValue = newValue!);
+                                      () => _model.switchValue = newValue);
                                 },
                                 activeColor:
                                     FlutterFlowTheme.of(context).primary,
@@ -245,7 +242,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                               ),
                             ],
                           ),
-                        ].divide(SizedBox(height: 16.0)),
+                        ].divide(const SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
@@ -268,7 +265,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -319,7 +316,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -354,7 +351,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                         ),
                       ),
                     ),
-                  ].divide(SizedBox(width: 16.0)),
+                  ].divide(const SizedBox(width: 16.0)),
                 ),
                 Material(
                   color: Colors.transparent,
@@ -369,7 +366,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 20.0, 20.0, 20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -426,7 +423,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                               padding: EdgeInsets.zero,
                             ),
                           ),
-                        ].divide(SizedBox(height: 16.0)),
+                        ].divide(const SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
@@ -444,7 +441,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 20.0, 20.0, 20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -464,11 +461,11 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFE3F2FD),
+                                  color: const Color(0xFFE3F2FD),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       8.0, 16.0, 8.0, 16.0),
                                   child: Text(
                                     'Last 7 Days',
@@ -476,7 +473,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                         .bodySmall
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFF1565C0),
+                                          color: const Color(0xFF1565C0),
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -485,7 +482,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                             ],
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: 200.0,
@@ -494,9 +491,9 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                     .primaryBackground,
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              alignment: AlignmentDirectional(0.0, 1.0),
+                              alignment: const AlignmentDirectional(0.0, 1.0),
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: const AlignmentDirectional(0.0, 1.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
@@ -525,7 +522,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(8.0),
@@ -567,7 +564,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(8.0),
@@ -609,7 +606,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(8.0),
@@ -651,7 +648,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(8.0),
@@ -693,7 +690,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(8.0),
@@ -735,7 +732,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(8.0),
@@ -777,7 +774,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(8.0),
@@ -801,12 +798,12 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                               ),
                             ),
                           ),
-                        ].divide(SizedBox(height: 16.0)),
+                        ].divide(const SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
                 ),
-              ].divide(SizedBox(height: 24.0)),
+              ].divide(const SizedBox(height: 24.0)),
             ),
           ),
         ),

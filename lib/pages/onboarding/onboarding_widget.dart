@@ -2,17 +2,11 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'onboarding_model.dart';
 export 'onboarding_model.dart';
@@ -52,8 +46,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -71,8 +65,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 80.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 80.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -90,8 +84,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.4, 0.4),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.4, 0.4),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -109,8 +103,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -128,8 +122,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 80.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 80.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -147,8 +141,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.5, 0.5),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.5, 0.5),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -166,8 +160,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -185,8 +179,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 80.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 80.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -204,8 +198,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.5, 0.5),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.5, 0.5),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -243,7 +237,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
               if (_model.pageViewCurrentIndex == 0) {
                 return 'Welcome ';
               } else if (_model.pageViewCurrentIndex == 1) {
-                return 'Welcome P';
+                return 'Welcome ';
               } else if (_model.pageViewCurrentIndex == 2) {
                 return 'Welcome ';
               } else {
@@ -255,7 +249,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -264,7 +258,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AnimatedContainer(
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               width: () {
                 if (_model.pageViewCurrentIndex == 0) {
@@ -283,7 +277,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
               ),
             ),
             Expanded(
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 height: 700.0,
                 child: Stack(
@@ -298,7 +292,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 120.0, 0.0, 68.0),
                               child: Lottie.asset(
                                 'assets/jsons/Animation_-_1735901146866.json',
@@ -309,7 +303,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(24.0),
+                              padding: const EdgeInsets.all(24.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -331,7 +325,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                   ).animateOnPageLoad(animationsMap[
                                       'textOnPageLoadAnimation1']!),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: Text(
                                       'Elevate your solar needs smartly.',
@@ -346,7 +340,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                         'textOnPageLoadAnimation2']!),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 24.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -367,7 +361,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                             await _model.pageViewController
                                                 ?.nextPage(
                                               duration:
-                                                  Duration(milliseconds: 300),
+                                                  const Duration(milliseconds: 300),
                                               curve: Curves.ease,
                                             );
                                           },
@@ -385,7 +379,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 120.0, 0.0, 68.0),
                               child: Lottie.asset(
                                 'assets/jsons/home-daylight.json',
@@ -396,7 +390,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(24.0),
+                              padding: const EdgeInsets.all(24.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -411,7 +405,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                         ),
-                                    colors: [
+                                    colors: const [
                                       Color(0xFF7A1CDE),
                                       Color(0xFFD85573)
                                     ],
@@ -420,7 +414,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                   ).animateOnPageLoad(animationsMap[
                                       'textOnPageLoadAnimation3']!),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: Text(
                                       'With SolaRis, fulfill your power needs smartly.',
@@ -434,7 +428,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                         'textOnPageLoadAnimation4']!),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 24.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -455,7 +449,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                             await _model.pageViewController
                                                 ?.nextPage(
                                               duration:
-                                                  Duration(milliseconds: 300),
+                                                  const Duration(milliseconds: 300),
                                               curve: Curves.ease,
                                             );
                                           },
@@ -473,7 +467,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 120.0, 0.0, 68.0),
                               child: Lottie.asset(
                                 'assets/jsons/3rd_onboard.json',
@@ -484,7 +478,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(24.0),
+                              padding: const EdgeInsets.all(24.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -498,7 +492,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                           letterSpacing: 0.0,
                                         ),
                                     colors: [
-                                      Color(0xFF523284),
+                                      const Color(0xFF523284),
                                       FlutterFlowTheme.of(context).secondary
                                     ],
                                     gradientDirection: GradientDirection.ltr,
@@ -506,7 +500,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                   ).animateOnPageLoad(animationsMap[
                                       'textOnPageLoadAnimation5']!),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: Text(
                                       'With SolaRis, be a part of sustainable life',
@@ -520,7 +514,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                         'textOnPageLoadAnimation6']!),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 24.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -553,10 +547,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                       ],
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-0.85, 0.85),
+                      alignment: const AlignmentDirectional(-0.85, 0.85),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                         child: smooth_page_indicator.SmoothPageIndicator(
                           controller: _model.pageViewController ??=
                               PageController(initialPage: 0),
@@ -565,7 +559,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           onDotClicked: (i) async {
                             await _model.pageViewController!.animateToPage(
                               i,
-                              duration: Duration(milliseconds: 500),
+                              duration: const Duration(milliseconds: 500),
                               curve: Curves.ease,
                             );
                             safeSetState(() {});

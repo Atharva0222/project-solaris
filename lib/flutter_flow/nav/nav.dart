@@ -1,20 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -82,95 +76,95 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : GetStartedWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const GetStartedWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : GetStartedWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const GetStartedWidget(),
         ),
         FFRoute(
           name: 'ProfitCalculator',
           path: '/profitCalculator',
-          builder: (context, params) => ProfitCalculatorWidget(),
+          builder: (context, params) => const ProfitCalculatorWidget(),
         ),
         FFRoute(
           name: 'loginAndSignup',
           path: '/loginAndSignup',
-          builder: (context, params) => LoginAndSignupWidget(),
+          builder: (context, params) => const LoginAndSignupWidget(),
         ),
         FFRoute(
           name: 'onboarding',
           path: '/onboarding',
-          builder: (context, params) => OnboardingWidget(),
+          builder: (context, params) => const OnboardingWidget(),
         ),
         FFRoute(
           name: 'SubscriptionPlan',
           path: '/subscriptionPlan',
-          builder: (context, params) => SubscriptionPlanWidget(),
+          builder: (context, params) => const SubscriptionPlanWidget(),
         ),
         FFRoute(
           name: 'CardPayment',
           path: '/cardPayment',
-          builder: (context, params) => CardPaymentWidget(),
+          builder: (context, params) => const CardPaymentWidget(),
         ),
         FFRoute(
           name: 'accountPage',
           path: '/accountPage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'accountPage')
-              : AccountPageWidget(),
+              ? const NavBarPage(initialPage: 'accountPage')
+              : const AccountPageWidget(),
         ),
         FFRoute(
           name: 'dashboard',
           path: '/dashboard',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'dashboard')
-              : DashboardWidget(),
+              ? const NavBarPage(initialPage: 'dashboard')
+              : const DashboardWidget(),
         ),
         FFRoute(
           name: 'ConfirmationPlan',
           path: '/confirmationPlan',
-          builder: (context, params) => ConfirmationPlanWidget(),
+          builder: (context, params) => const ConfirmationPlanWidget(),
         ),
         FFRoute(
           name: 'getStarted',
           path: '/getStarted',
-          builder: (context, params) => GetStartedWidget(),
+          builder: (context, params) => const GetStartedWidget(),
         ),
         FFRoute(
           name: 'paymentSuccess',
           path: '/paymentSuccess',
-          builder: (context, params) => PaymentSuccessWidget(),
+          builder: (context, params) => const PaymentSuccessWidget(),
         ),
         FFRoute(
           name: 'onboarding2',
           path: '/onboarding2',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'onboarding2')
-              : Onboarding2Widget(),
+              ? const NavBarPage(initialPage: 'onboarding2')
+              : const Onboarding2Widget(),
         ),
         FFRoute(
           name: 'SolarRooftopCalc',
           path: '/solarRooftopCalc',
-          builder: (context, params) => SolarRooftopCalcWidget(),
+          builder: (context, params) => const SolarRooftopCalcWidget(),
         ),
         FFRoute(
           name: 'CalculatedPotential',
           path: '/calculatedPotential',
-          builder: (context, params) => CalculatedPotentialWidget(),
+          builder: (context, params) => const CalculatedPotentialWidget(),
         ),
         FFRoute(
           name: 'EditProfile',
           path: '/editProfile',
-          builder: (context, params) => EditProfileWidget(),
+          builder: (context, params) => const EditProfileWidget(),
         ),
         FFRoute(
           name: 'FAQs',
           path: '/fAQs',
           builder: (context, params) =>
-              params.isEmpty ? NavBarPage(initialPage: 'FAQs') : FAQsWidget(),
+              params.isEmpty ? const NavBarPage(initialPage: 'FAQs') : const FAQsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -408,7 +402,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

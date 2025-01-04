@@ -1,13 +1,7 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'card_payment_widget.dart' show CardPaymentWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 
 class CardPaymentModel extends FlutterFlowModel<CardPaymentWidget> {
   ///  State fields for stateful widgets in this page.
@@ -30,6 +24,7 @@ class CardPaymentModel extends FlutterFlowModel<CardPaymentWidget> {
   FocusNode? textFieldFocusNode4;
   TextEditingController? textController4;
   late bool passwordVisibility;
+  final textFieldMask4 = MaskTextInputFormatter(mask: '###');
   String? Function(BuildContext, String?)? textController4Validator;
 
   @override

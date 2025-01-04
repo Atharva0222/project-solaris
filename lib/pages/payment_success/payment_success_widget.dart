@@ -2,11 +2,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
 import 'payment_success_model.dart';
 export 'payment_success_model.dart';
 
@@ -60,7 +57,7 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 16.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 16.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -86,14 +83,14 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                     width: 140.0,
                     height: 140.0,
                     decoration: BoxDecoration(
-                      color: Color(0x4CE7E6F0),
+                      color: const Color(0x4CE7E6F0),
                       shape: BoxShape.circle,
                       border: Border.all(
                         color: Colors.white,
                         width: 2.0,
                       ),
                     ),
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Lottie.asset(
                       'assets/jsons/Payment_success.json',
                       width: 200.0,
@@ -105,7 +102,7 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                     child: Text(
                       'Payment Done!',
                       style: FlutterFlowTheme.of(context).displaySmall.override(
@@ -117,7 +114,7 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 8.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 8.0, 24.0, 0.0),
                     child: Text(
                       'Your payment has been confirmed, it may take 1-2 hours in order for your payment to go through and show up in your transation list.',
                       textAlign: TextAlign.center,
@@ -129,7 +126,7 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(32.0, 20.0, 32.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(32.0, 20.0, 32.0, 0.0),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -141,13 +138,13 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 12.0, 0.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 0.0, 0.0),
                               child: Image.asset(
                                 'assets/images/masterCard@2x.png',
@@ -157,7 +154,7 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -165,7 +162,7 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 4.0),
                                     child: Text(
                                       'Mastercard Ending in 2054',
@@ -188,7 +185,7 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 32.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 32.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -209,9 +206,9 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                               options: FFButtonOptions(
                                 width: 230.0,
                                 height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -225,7 +222,7 @@ class _PaymentSuccessWidgetState extends State<PaymentSuccessWidget> {
                                       fontWeight: FontWeight.bold,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),

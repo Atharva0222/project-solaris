@@ -4,10 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'subscription_plan_model.dart';
 export 'subscription_plan_model.dart';
 
@@ -71,14 +68,14 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -96,7 +93,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -130,28 +127,28 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                       letterSpacing: 0.0,
                                     ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0xFFE0E0E0),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
@@ -159,7 +156,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                                 filled: true,
                                 fillColor: Colors.white,
-                                suffixIcon: Icon(
+                                suffixIcon: const Icon(
                                   Icons.power,
                                 ),
                               ),
@@ -179,7 +176,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 0.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -205,7 +202,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                       controller:
                                           _model.dropDownValueController ??=
                                               FormFieldController<String>(null),
-                                      options: ['1', '3', '12'],
+                                      options: const ['1', '3', '12'],
                                       onChanged: (val) async {
                                         safeSetState(
                                             () => _model.dropDownValue = val);
@@ -237,14 +234,14 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                       borderColor: Colors.transparent,
                                       borderWidth: 0.0,
                                       borderRadius: 8.0,
-                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 12.0, 0.0),
                                       hidesUnderline: true,
                                       isOverButton: false,
                                       isSearchable: false,
                                       isMultiSelect: false,
                                     ),
-                                  ].divide(SizedBox(width: 8.0)),
+                                  ].divide(const SizedBox(width: 8.0)),
                                 ),
                               ],
                             ),
@@ -292,9 +289,9 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                               text: 'See plans',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -308,7 +305,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                          ].divide(SizedBox(height: 16.0)),
+                          ].divide(const SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -327,13 +324,13 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 20.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -352,13 +349,13 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     if (_model.basicPlan)
                                       Container(
                                         decoration: BoxDecoration(
-                                          color: Color(0xFFE3F2FD),
+                                          color: const Color(0xFFE3F2FD),
                                           borderRadius:
                                               BorderRadius.circular(20.0),
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 16.0, 8.0, 16.0),
                                           child: Text(
                                             'Recommended',
@@ -366,7 +363,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 .bodySmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF1565C0),
+                                                  color: const Color(0xFF1565C0),
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -376,12 +373,11 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   (int month) {
-                                    return "₹" +
-                                        (1000 * (month) - 1).toStringAsFixed(0);
+                                    return "₹${(1000 * (month) - 1).toStringAsFixed(0)}";
                                   }(_model.duration!),
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
@@ -394,7 +390,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   '150 kWh per month',
@@ -409,18 +405,18 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFFF5F5F5),
+                                    color: const Color(0xFFF5F5F5),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -443,7 +439,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -463,7 +459,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -483,13 +479,13 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ].divide(const SizedBox(height: 8.0)),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -503,9 +499,9 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -521,7 +517,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 16.0)),
+                            ].divide(const SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
@@ -540,13 +536,13 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 20.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -565,13 +561,13 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     if (_model.plusPlan)
                                       Container(
                                         decoration: BoxDecoration(
-                                          color: Color(0xFFE3F2FD),
+                                          color: const Color(0xFFE3F2FD),
                                           borderRadius:
                                               BorderRadius.circular(20.0),
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 16.0, 8.0, 16.0),
                                           child: Text(
                                             'Recommended',
@@ -579,7 +575,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 .bodySmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF1565C0),
+                                                  color: const Color(0xFF1565C0),
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -589,12 +585,11 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   (int month) {
-                                    return "₹" +
-                                        (2000 * (month) - 1).toStringAsFixed(0);
+                                    return "₹${(2000 * (month) - 1).toStringAsFixed(0)}";
                                   }(_model.duration!),
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
@@ -607,7 +602,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   '350 kWh per month',
@@ -622,18 +617,18 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFFF5F5F5),
+                                    color: const Color(0xFFF5F5F5),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -656,7 +651,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -676,7 +671,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -696,13 +691,13 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ].divide(const SizedBox(height: 8.0)),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -716,9 +711,9 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -734,7 +729,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 16.0)),
+                            ].divide(const SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
@@ -753,7 +748,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 20.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -764,7 +759,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 12.0, 0.0),
                                     child: Text(
                                       'Pro Plan',
@@ -779,12 +774,12 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   if (_model.proPlan)
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: Color(0xFFE3F2FD),
+                                        color: const Color(0xFFE3F2FD),
                                         borderRadius:
                                             BorderRadius.circular(20.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 16.0, 8.0, 16.0),
                                         child: Text(
                                           'Recommended',
@@ -792,7 +787,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                               .bodySmall
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xFF1565C0),
+                                                color: const Color(0xFF1565C0),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -801,13 +796,12 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ],
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   (int month) {
-                                    return "₹" +
-                                        (3700 * ((month)) - 1)
-                                            .toStringAsFixed(0);
+                                    return "₹${(3700 * ((month)) - 1)
+                                            .toStringAsFixed(0)}";
                                   }(_model.duration!),
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
@@ -820,7 +814,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   '500 kWh per month',
@@ -835,18 +829,18 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFFF5F5F5),
+                                    color: const Color(0xFFF5F5F5),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -869,7 +863,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -889,7 +883,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -909,7 +903,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -929,13 +923,13 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ].divide(const SizedBox(height: 8.0)),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -949,9 +943,9 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -967,7 +961,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 16.0)),
+                            ].divide(const SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
@@ -986,7 +980,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 20.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -997,7 +991,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 12.0, 0.0),
                                     child: Text(
                                       'Premium Plan',
@@ -1012,12 +1006,12 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   if (_model.premiumPlan)
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: Color(0xFFE3F2FD),
+                                        color: const Color(0xFFE3F2FD),
                                         borderRadius:
                                             BorderRadius.circular(20.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 16.0, 8.0, 16.0),
                                         child: Text(
                                           'Recommended',
@@ -1025,7 +1019,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                               .bodySmall
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xFF1565C0),
+                                                color: const Color(0xFF1565C0),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -1034,13 +1028,12 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ],
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   (int month) {
-                                    return "₹" +
-                                        (7000 * ((month)) - 1)
-                                            .toStringAsFixed(0);
+                                    return "₹${(7000 * ((month)) - 1)
+                                            .toStringAsFixed(0)}";
                                   }(_model.duration!),
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
@@ -1053,7 +1046,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   '900 kWh per month',
@@ -1068,18 +1061,18 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFFF5F5F5),
+                                    color: const Color(0xFFF5F5F5),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -1102,7 +1095,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1122,7 +1115,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1142,7 +1135,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1162,7 +1155,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1182,13 +1175,13 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ].divide(const SizedBox(height: 8.0)),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -1202,9 +1195,9 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -1220,12 +1213,12 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 16.0)),
+                            ].divide(const SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
                     ),
-                ].divide(SizedBox(height: 24.0)),
+                ].divide(const SizedBox(height: 24.0)),
               ),
             ),
           ),

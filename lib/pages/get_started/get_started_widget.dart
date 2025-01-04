@@ -91,6 +91,26 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
       'textOnPageLoadAnimation2': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
+          VisibilityEffect(duration: 350.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 350.0.ms,
+            duration: 400.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 350.0.ms,
+            duration: 400.0.ms,
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'textOnPageLoadAnimation3': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
           VisibilityEffect(duration: 400.ms),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -159,8 +179,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      FlutterFlowTheme.of(context).primary,
-                      FlutterFlowTheme.of(context).error,
+                      const Color(0xFF00F260),
+                      const Color(0xFF0575E6),
                       FlutterFlowTheme.of(context).tertiary
                     ],
                     stops: const [0.0, 0.5, 1.0],
@@ -195,8 +215,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Image.network(
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/f-f-templates-q1-23-fbcr63/assets/ax4fvwjz7awx/@4xff_badgeDesign_dark_small.png',
+                          child: Image.asset(
+                            'assets/images/SolaRis_Logo.png',
                             width: 100.0,
                             height: 100.0,
                             fit: BoxFit.cover,
@@ -208,29 +228,47 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
                         child: Text(
-                          'Welcome!',
+                          'Welcome To',
                           style: FlutterFlowTheme.of(context)
                               .displaySmall
                               .override(
                                 fontFamily: 'Inter',
                                 letterSpacing: 0.0,
+                                fontWeight: FontWeight.w500,
                               ),
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation1']!),
                       ),
                       Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                        child: Text(
+                          'SolaRis',
+                          style: FlutterFlowTheme.of(context)
+                              .displayMedium
+                              .override(
+                                fontFamily: 'Inter',
+                                fontSize: 56.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                        ).animateOnPageLoad(
+                            animationsMap['textOnPageLoadAnimation2']!),
+                      ),
+                      Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             44.0, 8.0, 44.0, 0.0),
                         child: Text(
-                          'Thanks for joining! Access or create your account below, and get started on your journey!',
+                          'Where Energy\nMeets Efficieny',
                           textAlign: TextAlign.center,
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Readex Pro',
+                                    fontSize: 22.0,
                                     letterSpacing: 0.0,
                                   ),
                         ).animateOnPageLoad(
-                            animationsMap['textOnPageLoadAnimation2']!),
+                            animationsMap['textOnPageLoadAnimation3']!),
                       ),
                     ],
                   ),
@@ -250,8 +288,8 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 16.0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.pushNamed('onboarding');
                           },
                           text: 'Get Started',
                           options: FFButtonOptions(
@@ -272,43 +310,6 @@ class _GetStartedWidgetState extends State<GetStartedWidget>
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).alternate,
                               width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 16.0),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
-                          },
-                          text: 'My Account',
-                          options: FFButtonOptions(
-                            width: 230.0,
-                            height: 52.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primary,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 3.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
                             ),
                             borderRadius: BorderRadius.circular(12.0),
                           ),

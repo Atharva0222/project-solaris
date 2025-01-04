@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'account_page_model.dart';
 export 'account_page_model.dart';
 
@@ -38,6 +39,8 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -54,17 +57,20 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
               Container(
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 height: MediaQuery.sizeOf(context).height * 0.4,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFF4B39EF), Color(0xFF3700B3)],
-                    stops: [0.0, 1.0],
-                    begin: AlignmentDirectional(0.0, -1.0),
-                    end: AlignmentDirectional(0, 1.0),
+                    colors: [
+                      FlutterFlowTheme.of(context).primary,
+                      const Color(0xFFA1F8D6)
+                    ],
+                    stops: const [0.0, 1.0],
+                    begin: const AlignmentDirectional(0.0, -1.0),
+                    end: const AlignmentDirectional(0, 1.0),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 38.0, 24.0, 24.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -102,23 +108,15 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'Sarah Johnson',
+                            '@$currentUserEmail',
                             style: FlutterFlowTheme.of(context)
-                                .headlineMedium
+                                .bodyLarge
                                 .override(
-                                  fontFamily: 'Inter',
-                                  color: Colors.white,
+                                  fontFamily: 'Readex Pro',
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                 ),
-                          ),
-                          Text(
-                            '@sarahjohnson',
-                            style:
-                                FlutterFlowTheme.of(context).bodyLarge.override(
-                                      fontFamily: 'Readex Pro',
-                                      color: const Color(0xFFE0E0E0),
-                                      letterSpacing: 0.0,
-                                    ),
                           ),
                         ].divide(const SizedBox(height: 8.0)),
                       ),
@@ -167,7 +165,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 16.0, 8.0, 16.0),
                                         child: Text(
-                                          'Premium',
+                                          FFAppState().currentPlan,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -284,8 +282,8 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                         ),
                       ),
                       FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          context.pushNamed('EditProfile');
                         },
                         text: 'Edit Profile',
                         options: FFButtonOptions(
@@ -312,7 +310,7 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                           await authManager.signOut();
                           GoRouter.of(context).clearRedirectLocation();
 
-                          context.goNamedAuth('onboarding', context.mounted);
+                          context.goNamedAuth('getStarted', context.mounted);
                         },
                         text: 'Logout',
                         options: FFButtonOptions(

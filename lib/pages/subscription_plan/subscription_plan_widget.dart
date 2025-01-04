@@ -171,6 +171,77 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                               validator: _model.textControllerValidator
                                   .asValidator(context),
                             ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 12.0, 0.0, 12.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Billing Cycle (months)',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    FlutterFlowDropDown<String>(
+                                      controller:
+                                          _model.dropDownValueController ??=
+                                              FormFieldController<String>(null),
+                                      options: const ['1', '3', '12'],
+                                      onChanged: (val) async {
+                                        safeSetState(
+                                            () => _model.dropDownValue = val);
+                                        _model.duration =
+                                            int.parse((_model.dropDownValue!));
+                                        safeSetState(() {});
+                                      },
+                                      width: 110.0,
+                                      height: 40.0,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
+                                          ),
+                                      hintText: 'Duration',
+                                      icon: Icon(
+                                        Icons.keyboard_arrow_down_rounded,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        size: 24.0,
+                                      ),
+                                      fillColor: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      elevation: 2.0,
+                                      borderColor: Colors.transparent,
+                                      borderWidth: 0.0,
+                                      borderRadius: 8.0,
+                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 0.0, 12.0, 0.0),
+                                      hidesUnderline: true,
+                                      isOverButton: false,
+                                      isSearchable: false,
+                                      isMultiSelect: false,
+                                    ),
+                                  ].divide(const SizedBox(width: 8.0)),
+                                ),
+                              ],
+                            ),
                             FFButtonWidget(
                               onPressed: () async {
                                 if ((int usage) {
@@ -179,20 +250,33 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   _model.basicPlan = true;
                                   _model.proPlan = false;
                                   _model.premiumPlan = false;
+                                  _model.plusPlan = false;
                                   safeSetState(() {});
                                 } else {
                                   if ((int usage) {
                                     return usage > 150 && usage <= 350;
                                   }(int.parse(_model.textController.text))) {
                                     _model.basicPlan = false;
-                                    _model.proPlan = true;
+                                    _model.proPlan = false;
                                     _model.premiumPlan = false;
+                                    _model.plusPlan = true;
                                     safeSetState(() {});
                                   } else {
-                                    _model.basicPlan = false;
-                                    _model.proPlan = false;
-                                    _model.premiumPlan = true;
-                                    safeSetState(() {});
+                                    if ((int usage) {
+                                      return usage >= 350 && usage < 500;
+                                    }(int.parse(_model.textController.text))) {
+                                      _model.proPlan = true;
+                                      _model.basicPlan = false;
+                                      _model.premiumPlan = false;
+                                      _model.plusPlan = false;
+                                      safeSetState(() {});
+                                    } else {
+                                      _model.basicPlan = false;
+                                      _model.plusPlan = false;
+                                      _model.proPlan = false;
+                                      _model.premiumPlan = true;
+                                      safeSetState(() {});
+                                    }
                                   }
                                 }
 
@@ -325,85 +409,6 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   decoration: BoxDecoration(
                                     color: const Color(0xFFF5F5F5),
                                     borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 12.0, 0.0, 12.0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              'Billing Cycle (months)',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          FlutterFlowDropDown<String>(
-                                            controller: _model
-                                                    .dropDownValueController1 ??=
-                                                FormFieldController<String>(
-                                                    null),
-                                            options: const ['1', '3', '12'],
-                                            onChanged: (val) async {
-                                              safeSetState(() =>
-                                                  _model.dropDownValue1 = val);
-                                              _model.duration = int.parse(
-                                                  (_model.dropDownValue1!));
-                                              safeSetState(() {});
-                                            },
-                                            width: 110.0,
-                                            height: 40.0,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      letterSpacing: 0.0,
-                                                    ),
-                                            hintText: 'Duration',
-                                            icon: Icon(
-                                              Icons.keyboard_arrow_down_rounded,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              size: 24.0,
-                                            ),
-                                            fillColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .secondaryBackground,
-                                            elevation: 2.0,
-                                            borderColor: Colors.transparent,
-                                            borderWidth: 0.0,
-                                            borderRadius: 8.0,
-                                            margin:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 0.0, 12.0, 0.0),
-                                            hidesUnderline: true,
-                                            isOverButton: false,
-                                            isSearchable: false,
-                                            isMultiSelect: false,
-                                          ),
-                                        ].divide(const SizedBox(width: 8.0)),
-                                      ),
-                                    ],
                                   ),
                                 ),
                               ),
@@ -550,7 +555,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                    if (_model.basicPlan)
+                                    if (_model.plusPlan)
                                       Container(
                                         decoration: BoxDecoration(
                                           color: const Color(0xFFE3F2FD),
@@ -617,85 +622,6 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     color: const Color(0xFFF5F5F5),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 12.0, 0.0, 12.0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              'Billing Cycle (months)',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          FlutterFlowDropDown<String>(
-                                            controller: _model
-                                                    .dropDownValueController2 ??=
-                                                FormFieldController<String>(
-                                                    null),
-                                            options: const ['1', '3', '12'],
-                                            onChanged: (val) async {
-                                              safeSetState(() =>
-                                                  _model.dropDownValue2 = val);
-                                              _model.duration = int.parse(
-                                                  (_model.dropDownValue2!));
-                                              safeSetState(() {});
-                                            },
-                                            width: 110.0,
-                                            height: 40.0,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      letterSpacing: 0.0,
-                                                    ),
-                                            hintText: 'Duration',
-                                            icon: Icon(
-                                              Icons.keyboard_arrow_down_rounded,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              size: 24.0,
-                                            ),
-                                            fillColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .secondaryBackground,
-                                            elevation: 2.0,
-                                            borderColor: Colors.transparent,
-                                            borderWidth: 0.0,
-                                            borderRadius: 8.0,
-                                            margin:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 0.0, 12.0, 0.0),
-                                            hidesUnderline: true,
-                                            isOverButton: false,
-                                            isSearchable: false,
-                                            isMultiSelect: false,
-                                          ),
-                                        ].divide(const SizedBox(width: 8.0)),
-                                      ),
-                                    ],
-                                  ),
                                 ),
                               ),
                               Padding(
@@ -714,7 +640,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                           size: 20.0,
                                         ),
                                         Text(
-                                          '24/7 Support',
+                                          'All basic features',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -774,10 +700,10 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   onPressed: () async {
                                     context.pushNamed('ConfirmationPlan');
 
-                                    FFAppState().currentPlan = 'basic';
+                                    FFAppState().currentPlan = 'plus';
                                     safeSetState(() {});
                                   },
-                                  text: 'Select Basic Plan',
+                                  text: 'Select Plus Plan',
                                   options: FFButtonOptions(
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
@@ -871,7 +797,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   (int month) {
-                                    return "₹${(7000 * ((month)) - 1)
+                                    return "₹${(3700 * ((month)) - 1)
                                             .toStringAsFixed(0)}";
                                   }(_model.duration!),
                                   style: FlutterFlowTheme.of(context)
@@ -907,78 +833,6 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                   decoration: BoxDecoration(
                                     color: const Color(0xFFF5F5F5),
                                     borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 12.0, 0.0, 12.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          'Billing Cycle (months)',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                letterSpacing: 0.0,
-                                              ),
-                                        ),
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            FlutterFlowDropDown<String>(
-                                              controller: _model
-                                                      .dropDownValueController3 ??=
-                                                  FormFieldController<String>(
-                                                      null),
-                                              options: const ['1', '3', '12'],
-                                              onChanged: (val) async {
-                                                safeSetState(() => _model
-                                                    .dropDownValue3 = val);
-                                                _model.duration = int.parse(
-                                                    (_model.dropDownValue3!));
-                                                safeSetState(() {});
-                                              },
-                                              width: 110.0,
-                                              height: 40.0,
-                                              textStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                              hintText: 'Duration',
-                                              icon: Icon(
-                                                Icons
-                                                    .keyboard_arrow_down_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 24.0,
-                                              ),
-                                              fillColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              elevation: 2.0,
-                                              borderColor: Colors.transparent,
-                                              borderWidth: 0.0,
-                                              borderRadius: 8.0,
-                                              margin: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      12.0, 0.0, 12.0, 0.0),
-                                              hidesUnderline: true,
-                                              isOverButton: false,
-                                              isSearchable: false,
-                                              isMultiSelect: false,
-                                            ),
-                                          ].divide(const SizedBox(width: 8.0)),
-                                        ),
-                                      ],
-                                    ),
                                   ),
                                 ),
                               ),
@@ -1175,7 +1029,7 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                     12.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   (int month) {
-                                    return "₹${(6000 * ((month)) - 1)
+                                    return "₹${(7000 * ((month)) - 1)
                                             .toStringAsFixed(0)}";
                                   }(_model.duration!),
                                   style: FlutterFlowTheme.of(context)
@@ -1201,74 +1055,6 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                             .secondaryText,
                                         letterSpacing: 0.0,
                                       ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 12.0, 0.0, 12.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'Billing Cycle (months)',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            letterSpacing: 0.0,
-                                          ),
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        FlutterFlowDropDown<String>(
-                                          controller: _model
-                                                  .dropDownValueController4 ??=
-                                              FormFieldController<String>(null),
-                                          options: const ['1', '3', '12'],
-                                          onChanged: (val) async {
-                                            safeSetState(() =>
-                                                _model.dropDownValue4 = val);
-                                            _model.duration = int.parse(
-                                                (_model.dropDownValue4!));
-                                            safeSetState(() {});
-                                          },
-                                          width: 110.0,
-                                          height: 40.0,
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    letterSpacing: 0.0,
-                                                  ),
-                                          hintText: 'Duration',
-                                          icon: Icon(
-                                            Icons.keyboard_arrow_down_rounded,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            size: 24.0,
-                                          ),
-                                          fillColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryBackground,
-                                          elevation: 2.0,
-                                          borderColor: Colors.transparent,
-                                          borderWidth: 0.0,
-                                          borderRadius: 8.0,
-                                          margin:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  12.0, 0.0, 12.0, 0.0),
-                                          hidesUnderline: true,
-                                          isOverButton: false,
-                                          isSearchable: false,
-                                          isMultiSelect: false,
-                                        ),
-                                      ].divide(const SizedBox(width: 8.0)),
-                                    ),
-                                  ],
                                 ),
                               ),
                               Padding(

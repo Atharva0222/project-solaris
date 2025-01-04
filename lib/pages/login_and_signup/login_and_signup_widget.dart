@@ -531,8 +531,8 @@ class _LoginAndSignupWidgetState extends State<LoginAndSignupWidget>
                                                         return;
                                                       }
 
-                                                      context.goNamedAuth(
-                                                          'ProfitCalculator',
+                                                      context.pushNamedAuth(
+                                                          'dashboard',
                                                           context.mounted);
                                                     },
                                                     text: 'Sign In',
@@ -1071,7 +1071,7 @@ class _LoginAndSignupWidgetState extends State<LoginAndSignupWidget>
                                                       }
 
                                                       context.goNamedAuth(
-                                                          'ProfitCalculator',
+                                                          'onboarding2',
                                                           context.mounted);
                                                     },
                                                     text: 'Create Account',

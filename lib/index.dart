@@ -14,3 +14,10 @@ export '/pages/confirmation_plan/confirmation_plan_widget.dart'
 export '/pages/get_started/get_started_widget.dart' show GetStartedWidget;
 export '/pages/payment_success/payment_success_widget.dart'
     show PaymentSuccessWidget;
+export '/pages/onboarding2/onboarding2_widget.dart' show Onboarding2Widget;
+export '/pages/solar_rooftop_calc/solar_rooftop_calc_widget.dart'
+    show SolarRooftopCalcWidget;
+export '/pages/calculated_potential/calculated_potential_widget.dart'
+    show CalculatedPotentialWidget;
+export '/pages/edit_profile/edit_profile_widget.dart' show EditProfileWidget;
+export '/pages/f_a_qs/f_a_qs_widget.dart' show FAQsWidget;

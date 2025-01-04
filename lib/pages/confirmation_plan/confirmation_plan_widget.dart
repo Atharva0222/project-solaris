@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 import 'confirmation_plan_model.dart';
 export 'confirmation_plan_model.dart';
@@ -30,6 +31,27 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ConfirmationPlanModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (FFAppState().currentPlan == 'basic') {
+        _model.cost = 999;
+        safeSetState(() {});
+      } else {
+        if (FFAppState().currentPlan == 'plus') {
+          _model.cost = 1999;
+          safeSetState(() {});
+        } else {
+          if (FFAppState().currentPlan == 'pro') {
+            _model.cost = 3699;
+            safeSetState(() {});
+          } else {
+            _model.cost = 6999;
+            safeSetState(() {});
+          }
+        }
+      }
+    });
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
@@ -160,6 +182,9 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                           } else if (FFAppState().currentPlan ==
                                               'pro') {
                                             return 'Pro Plan';
+                                          } else if (FFAppState().currentPlan ==
+                                              'plus') {
+                                            return 'Plus Plan';
                                           } else {
                                             return 'Premium Plan';
                                           }
@@ -507,20 +532,12 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                             ),
                                       ),
                                       Text(
-                                        () {
-                                          if (FFAppState().currentPlan ==
-                                              'basic') {
-                                            return '₹999';
-                                          } else if (FFAppState().currentPlan ==
-                                              'plus') {
-                                            return '₹1999';
-                                          } else if (FFAppState().currentPlan ==
-                                              'pro') {
-                                            return '₹3699';
-                                          } else {
-                                            return '₹6999';
-                                          }
-                                        }(),
+                                        formatNumber(
+                                          _model.cost,
+                                          formatType: FormatType.decimal,
+                                          decimalType: DecimalType.automatic,
+                                          currency: '₹',
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -578,7 +595,12 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                             ),
                                       ),
                                       Text(
-                                        '\$1,043.46',
+                                        formatNumber(
+                                          _model.cost!.toDouble() * 0.18,
+                                          formatType: FormatType.decimal,
+                                          decimalType: DecimalType.automatic,
+                                          currency: '₹',
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -616,7 +638,12 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                               ),
                                         ),
                                         Text(
-                                          '\$6,840.46',
+                                          formatNumber(
+                                            (_model.cost!) + 149,
+                                            formatType: FormatType.decimal,
+                                            decimalType: DecimalType.automatic,
+                                            currency: '₹',
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(

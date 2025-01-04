@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class ConfirmationPlanModel extends FlutterFlowModel<ConfirmationPlanWidget> {
+  ///  Local state fields for this page.
+
+  int? cost;
+
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for TextField widget.

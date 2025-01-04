@@ -7,6 +7,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lottie/lottie.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'onboarding_model.dart';
 export 'onboarding_model.dart';
 
@@ -307,7 +308,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
+                                  GradientText(
                                     'Your World, Powered Smarter',
                                     style: FlutterFlowTheme.of(context)
                                         .displaySmall
@@ -315,6 +316,12 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                           fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
+                                    colors: [
+                                      FlutterFlowTheme.of(context).primary,
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    gradientDirection: GradientDirection.ltr,
+                                    gradientType: GradientType.linear,
                                   ).animateOnPageLoad(animationsMap[
                                       'textOnPageLoadAnimation1']!),
                                   Padding(
@@ -388,7 +395,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
+                                  GradientText(
                                     'Where Energy Meets \nEfficiency',
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
@@ -398,6 +405,12 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                         ),
+                                    colors: const [
+                                      Color(0xFF7A1CDE),
+                                      Color(0xFFD85573)
+                                    ],
+                                    gradientDirection: GradientDirection.ltr,
+                                    gradientType: GradientType.linear,
                                   ).animateOnPageLoad(animationsMap[
                                       'textOnPageLoadAnimation3']!),
                                   Padding(
@@ -470,7 +483,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
+                                  GradientText(
                                     'Better Life, Inside and Outside.',
                                     style: FlutterFlowTheme.of(context)
                                         .displaySmall
@@ -478,6 +491,12 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                           fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
+                                    colors: [
+                                      const Color(0xFF523284),
+                                      FlutterFlowTheme.of(context).secondary
+                                    ],
+                                    gradientDirection: GradientDirection.ltr,
+                                    gradientType: GradientType.linear,
                                   ).animateOnPageLoad(animationsMap[
                                       'textOnPageLoadAnimation5']!),
                                   Padding(

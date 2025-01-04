@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -74,16 +75,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? const ProfitCalculatorWidget()
-          : const OnboardingWidget(),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? const NavBarPage() : const GetStartedWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? const ProfitCalculatorWidget()
-              : const OnboardingWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? const NavBarPage() : const GetStartedWidget(),
         ),
         FFRoute(
           name: 'ProfitCalculator',
@@ -113,12 +112,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'accountPage',
           path: '/accountPage',
-          builder: (context, params) => const AccountPageWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'accountPage')
+              : const AccountPageWidget(),
         ),
         FFRoute(
           name: 'dashboard',
           path: '/dashboard',
-          builder: (context, params) => const DashboardWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'dashboard')
+              : const DashboardWidget(),
         ),
         FFRoute(
           name: 'ConfirmationPlan',
@@ -134,6 +137,33 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'paymentSuccess',
           path: '/paymentSuccess',
           builder: (context, params) => const PaymentSuccessWidget(),
+        ),
+        FFRoute(
+          name: 'onboarding2',
+          path: '/onboarding2',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'onboarding2')
+              : const Onboarding2Widget(),
+        ),
+        FFRoute(
+          name: 'SolarRooftopCalc',
+          path: '/solarRooftopCalc',
+          builder: (context, params) => const SolarRooftopCalcWidget(),
+        ),
+        FFRoute(
+          name: 'CalculatedPotential',
+          path: '/calculatedPotential',
+          builder: (context, params) => const CalculatedPotentialWidget(),
+        ),
+        FFRoute(
+          name: 'EditProfile',
+          path: '/editProfile',
+          builder: (context, params) => const EditProfileWidget(),
+        ),
+        FFRoute(
+          name: 'FAQs',
+          path: '/fAQs',
+          builder: (context, params) => const FAQsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -304,7 +334,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/onboarding';
+            return '/getStarted';
           }
           return null;
         },

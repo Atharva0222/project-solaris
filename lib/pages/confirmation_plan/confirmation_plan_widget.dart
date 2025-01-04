@@ -280,7 +280,7 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Valid Until:',
+                                  'Vali For:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -291,7 +291,9 @@ class _ConfirmationPlanWidgetState extends State<ConfirmationPlanWidget> {
                                       ),
                                 ),
                                 Text(
-                                  'Dec 31, 2024',
+                                  (String var1) {
+                                    return "$var1 Month(s)";
+                                  }(FFAppState().timePeriod.toString()),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(

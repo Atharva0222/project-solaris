@@ -56,8 +56,8 @@ class _FAQsWidgetState extends State<FAQsWidget> {
               color: FlutterFlowTheme.of(context).primaryText,
               size: 30.0,
             ),
-            onPressed: () {
-              print('IconButton pressed ...');
+            onPressed: () async {
+              context.pushNamed('dashboard');
             },
           ),
           title: Text(
@@ -99,7 +99,7 @@ class _FAQsWidgetState extends State<FAQsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Why SolaRis?',
+                              'What is Solaris?',
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
@@ -122,7 +122,7 @@ class _FAQsWidgetState extends State<FAQsWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 16.0, 16.0, 16.0),
                                   child: Text(
-                                    'Solar panels convert sunlight into electricity through photovoltaic cells. These cells absorb solar radiation and create an electric current, which is then converted into usable power for your home through an inverter system.',
+                                    'It’s a cool subscription service for clean, solar power—no upfront costs, just affordable energy!',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -159,7 +159,7 @@ class _FAQsWidgetState extends State<FAQsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'What are the benefits of switching to solar?',
+                              'Do I need to pay upfront?',
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
@@ -182,7 +182,7 @@ class _FAQsWidgetState extends State<FAQsWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 16.0, 16.0, 16.0),
                                   child: Text(
-                                    'Switching to solar offers numerous benefits including reduced electricity bills, lower carbon footprint, increased property value, and energy independence. Additionally, many regions offer tax incentives and rebates for solar installation.',
+                                    'Nope! Just pay a subscription based on how much energy you use.',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -219,7 +219,7 @@ class _FAQsWidgetState extends State<FAQsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'How long do solar panels last?',
+                              'Can I switch between solar and grid power?',
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
@@ -242,7 +242,67 @@ class _FAQsWidgetState extends State<FAQsWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 16.0, 16.0, 16.0),
                                   child: Text(
-                                    'High-quality solar panels typically last 25-30 years with proper maintenance. While their efficiency might slightly decrease over time (about 0.5% annually), most manufacturers guarantee at least 80% production capacity after 25 years.',
+                                    'Yep! Just hit the button in the app to switch whenever you want.',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ].divide(const SizedBox(height: 12.0)),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Material(
+                    color: Colors.transparent,
+                    elevation: 2.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    child: Container(
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).primary,
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            16.0, 16.0, 16.0, 16.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              'How do I know if I’m saving money?',
+                              style: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).info,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                            ),
+                            Card(
+                              clipBehavior: Clip.antiAliasWithSaveLayer,
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              elevation: 1.0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: Container(
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      16.0, 16.0, 16.0, 16.0),
+                                  child: Text(
+                                    'Check the profit calculator in the app to see your savings.',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

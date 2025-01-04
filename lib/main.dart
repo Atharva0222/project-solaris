@@ -123,6 +123,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'dashboard': const DashboardWidget(),
       'onboarding2': const Onboarding2Widget(),
+      'FAQs': const FAQsWidget(),
       'accountPage': const AccountPageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -154,6 +155,13 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.calculate,
             ),
             label: 'Calculator',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.question_answer_rounded,
+            ),
+            label: '',
             tooltip: '',
           ),
           BottomNavigationBarItem(

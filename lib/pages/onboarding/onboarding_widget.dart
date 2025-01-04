@@ -235,13 +235,13 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           title: Text(
             () {
               if (_model.pageViewCurrentIndex == 0) {
-                return 'Welcome Page 1';
+                return 'Welcome ';
               } else if (_model.pageViewCurrentIndex == 1) {
-                return 'Welcome Page 2';
+                return 'Welcome P';
               } else if (_model.pageViewCurrentIndex == 2) {
-                return 'Welcome Page 3';
+                return 'Welcome ';
               } else {
-                return 'Welcome Page 4';
+                return 'Welcome ';
               }
             }(),
             style: FlutterFlowTheme.of(context).headlineMedium.override(

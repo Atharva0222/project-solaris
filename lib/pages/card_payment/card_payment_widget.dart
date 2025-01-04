@@ -392,7 +392,7 @@ class _CardPaymentWidgetState extends State<CardPaymentWidget> {
                               onPressed: () async {
                                 context.goNamed('dashboard');
                               },
-                              text: 'Save Card Details',
+                              text: 'Pay',
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 50.0,
@@ -406,6 +406,7 @@ class _CardPaymentWidgetState extends State<CardPaymentWidget> {
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: Colors.white,
+                                      fontSize: 20.0,
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,

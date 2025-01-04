@@ -199,7 +199,22 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                               ),
                                         ),
                                         Text(
-                                          '500 kWh',
+                                          () {
+                                            if (FFAppState().currentPlan ==
+                                                'basic') {
+                                              return '150 kWh';
+                                            } else if (FFAppState()
+                                                    .currentPlan ==
+                                                'plus') {
+                                              return '350 kWh';
+                                            } else if (FFAppState()
+                                                    .currentPlan ==
+                                                'pro') {
+                                              return '500 kWh';
+                                            } else {
+                                              return '900 kWh';
+                                            }
+                                          }(),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
@@ -230,7 +245,22 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                               ),
                                         ),
                                         Text(
-                                          '\$99.99',
+                                          () {
+                                            if (FFAppState().currentPlan ==
+                                                'basic') {
+                                              return '₹999';
+                                            } else if (FFAppState()
+                                                    .currentPlan ==
+                                                'plus') {
+                                              return '₹1999';
+                                            } else if (FFAppState()
+                                                    .currentPlan ==
+                                                'pro') {
+                                              return '₹3699';
+                                            } else {
+                                              return '₹6999';
+                                            }
+                                          }(),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
@@ -261,7 +291,9 @@ class _AccountPageWidgetState extends State<AccountPageWidget> {
                                               ),
                                         ),
                                         Text(
-                                          'Dec 31, 2024',
+                                          (String var1) {
+                                            return "$var1 Month(s)";
+                                          }(FFAppState().timePeriod.toString()),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(

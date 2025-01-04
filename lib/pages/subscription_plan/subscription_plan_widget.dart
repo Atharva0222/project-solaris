@@ -209,6 +209,9 @@ class _SubscriptionPlanWidgetState extends State<SubscriptionPlanWidget> {
                                         _model.duration =
                                             int.parse((_model.dropDownValue!));
                                         safeSetState(() {});
+                                        FFAppState().timePeriod =
+                                            int.parse((_model.dropDownValue!));
+                                        safeSetState(() {});
                                       },
                                       width: 110.0,
                                       height: 40.0,
